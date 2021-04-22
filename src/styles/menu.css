@@ -1,0 +1,59 @@
+.menu{
+    background-color: white;
+    border-bottom: 1px rgb(255,179,190,0.7) solid;
+    border-top: 2px rgb(255, 127, 80, 0.8) solid;
+    width: 100%;
+    height: 9rem;
+    transition: height 0.5s ease-in-out;
+}
+
+/* TIP
+flexbox komentar
+*/
+.menu-hidden{
+    background-color: white;
+    border-bottom: 1px rgb(255,179,190,0.7) solid;
+    width: 100%;
+    height:0;
+    position: absolute;
+    transition: height 0.5s ease-in-out;
+}
+
+.menu-navlinks{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin-right: 0.5rem;
+    justify-content: space-between;
+    transform: translateY(0);
+    transition: transform 0.5s ease-in-out;
+
+}
+.menu-navlinks-hidden{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin-right: 0.5rem;
+    justify-content: space-between;
+    transform: translateY(-300%);
+    transition: transform 0.5s ease-in-out;
+}
+
+
+
+@media only screen and (min-width:550px){
+    .menu{
+        display:none;
+    }
+}
+
+.menu-navlinks a,.menu-navlinks-hidden a{
+    color:#ffb3be;
+    text-shadow: none;
+    font-weight: 700;
+}
+
+.menu-navlinks li{
+    padding:0.6rem 0 0.2rem 0;
+    border-bottom:1px solid rgb(255,179,190,0.2)
+}
